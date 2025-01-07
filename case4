@@ -1,0 +1,18 @@
+from random import randint
+
+X = randint(1,100)
+
+for y in range (5):
+    
+  y = input("Угадайте целое число от 1 до 100: "+"(осталось {} попыток)".format(5 - y))
+  
+  y = int(y)
+
+  if y == X:
+    print("Вы угадали")
+    break
+
+  print("Ваше число " + ("больше" if y > X else "меньше") + ", чем загадано")
+
+print("Загаданным числом было: " + str(X))
+print("В следующий раз повезёт!")
